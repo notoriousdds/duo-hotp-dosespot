@@ -1,6 +1,8 @@
 # Duo's HOTP for Dosespot.
 
-This fork is simply for the purpose of modifing the instructions of <a href="https://github.com/WillForan/duo-hotp">the work by WillForan</a> to be used with Duo's HOTP via Dosespot. Duo can authenticate using HOTP - _Hash(message authentication code)-based One-Time Password_. But it has some proprietary covers over the OATH (Initiative for Open Authentication) standard.
+This fork is simply for the purpose of modifing the instructions of <a href="https://github.com/WillForan/duo-hotp">the work by WillForan</a> in order to extact Duo's HOTP secret key when connecting with Dosespot (or possibly other services that use DUO and don't provide QR codes). 
+
+Duo can authenticate using HOTP - _Hash(message authentication code)-based One-Time Password_. But it has some proprietary covers over the OATH (Initiative for Open Authentication) standard.
 
 [simonseo/nyuad-spammer](https://github.com/simonseo/nyuad-spammer/tree/master/spammer/duo) has code to work around this. 
 `duo.py` is largely copied from there
@@ -25,7 +27,7 @@ Unlike most services, Dosespot doesn't provide QR codes or links with which to u
    <img src="img/duo.png?raw=True">
    <br>
 5. Copy the entire code (circled in red above).  <strong>NOTE: The code is larger than the box in which it is displayed! Be sure to copy the entire code.</strong>
-6. Using the code you just copied AND the example URL in WillForan's orginal instructions, create your own personal URL by replacing the back half of the eample URL with the code you just copied.  (I.E. it should look like this:
+6. Using the code you just copied AND the example URL in WillForan's orginal instructions, create your own personal URL by replacing the back half of the example URL with the code you just copied.  (I.E. it should look like this:
    `https://api-e4c9863e.duosecurity.com/frame/qr?value=ABCDEFGHIJKLMNOPQRST-YXBpLWYzNzNmOGIxLmR1b3NlY3VyaXR5LmNvbQ`)
 7. You now have a URL that can you used in the duo.py progam with which to extract the HTOP secret! In other words, just run:
    `./duo.py new 'https://YOUR-PERSONAL-URL'` to register.
