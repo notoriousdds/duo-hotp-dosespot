@@ -22,7 +22,8 @@ Unlike most services, Dosespot doesn't provide QR codes or links with which to u
 2. <strong>DO NOT CLICK ON THE LINK FROM YOUR PHONE!</strong> Clicking the link will start the importing of the secret key into the DUO app (which will prevent you from being able to use the duo.py program with the URL you're about to create.)
 3. Instead of clicking the link, copy and paste it into an email message that is addressed to yourself.
 4. From a desktop or laptop, click on the link from the email you just sent and it should open to something that looks like this:
-   
+   <img src="img/duo.png?raw=True">
+   <br>
 5. Copy the entire code (circled in red above).  <strong>NOTE: The code is larger than the box in which it is displayed! Be sure to copy the entire code.</strong>
 6. Using the code you just copied AND the example URL in WillForan's orginal instructions, create your own personal URL by replacing the back half of the eample URL with the code you just copied.  (I.E. it should look like this:
    `https://api-e4c9863e.duosecurity.com/frame/qr?value=ABCDEFGHIJKLMNOPQRST-YXBpLWYzNzNmOGIxLmR1b3NlY3VyaXR5LmNvbQ`)
