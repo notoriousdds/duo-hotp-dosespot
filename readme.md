@@ -29,9 +29,9 @@ Unlike most services, Dosespot doesn't provide QR codes or links with which to u
 5. Copy the entire code (circled in red above).  <strong>NOTE: The code is larger than the box in which it is displayed! Be sure to copy the entire code.</strong>
 6. Using the code you just copied AND the example URL in WillForan's orginal instructions, create your own personal URL by replacing the back half of the example URL with the code you just copied.  (I.E. it should look like this:
    `https://api-e4c9863e.duosecurity.com/frame/qr?value=ABCDEFGHIJKLMNOPQRST-YXBpLWYzNzNmOGIxLmR1b3NlY3VyaXR5LmNvbQ`)
-7. You now have a URL that can you used in the duo.py progam with which to extract the HTOP secret! In other words, just run:
+7. You now have a URL that can be used in the duo.py progam with which to extract the HTOP secret! In other words, just run:
    `./duo.py new 'https://YOUR-PERSONAL-URL'` to register.
-9. Duo.py stores the secret key in UTF-8 format in a filed named secrets.json.  If your chosen authenticator app requires that the key be in encoded in Base32 (like my authenticator app does), you need to encode it.  I used https://emn178.github.io/online-tools/base32_encode.html to encode the key. (You can also find the b32 encoded secret key simply by scrolling through the output of the duo.py output.)
+9. Duo.py stores the secret key in UTF-8 format in a file named secrets.json.  If your chosen authenticator app requires that the key be in encoded in Base32 (like my authenticator app does), you need to encode it.  I used https://emn178.github.io/online-tools/base32_encode.html to encode the key. (You can also find the Base32 encoded secret key simply by scrolling through the output of the duo.py output.)
    
 ### Convenience
 consider adding binding in `sxkd`, `xbindkeys`, etc for
